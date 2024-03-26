@@ -51,6 +51,9 @@ Grouping and Capturing is used in regular expressions to indicate which parts of
 Example: `"abc123, efg456"` In this example, the regex is looking for one of two expressions that match the requirements of the search pattern inside the parenthesis. In this case, `abc123` would be accepted first because it's the first string that meets the criteria of having three or six characters containing lowercase letters a-f and/or digits between 0-9.
 
 ### Bracket Expressions
+In our regular expression, we have two sets of brackets which both contain `[a-f0-9]`. This bracket expression tells the computer to look for a hexadecimal digit based on the two parameters it outlines. The first parameter, `a-f`, searches for any string that has lowercase letters a-f. Our second parameter, `0-9`, searches for any string that has contains numbers 0-9. The string that has these parameters can be any length. 
+
+Example: "abcdefgxyz321" In this string, the lowercase letters that would be chosen are `abcdef` because they are lowercase letters that are between a-f. The second component of the string that will be chosen is the numbers `321` because they are numbers between 0-9.
 
 ### Greedy and Lazy Match
 
