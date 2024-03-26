@@ -39,6 +39,7 @@ Quantifiers are the components of the regex that take a specified amount of char
 The OR Operator in our regex expression is marked by the | between our two quantifiers in brackets. This OR Operator servers two purposes. The first is it allows our search to find a string with six characters OR a string with three characters that meet the parameters inside the brackets. The second purpose is capturing and storing strings that meet the parameter requirements for later use. 
 
 ### Character Classes
+Character classes are components within our regular expression that tell us what type of characters to expect. In our example, we have two character classes: [a-f0-9] and [a-f0-9]. 'a-f' searches for strings with letters a-f. '0-9' searches for strings containing digits 0-9.
 
 ### Flags
 
