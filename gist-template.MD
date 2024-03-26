@@ -33,6 +33,7 @@ Regex Expression: /^#?([a-f0-9]{6}|[a-f0-9]{3})$/
 Anchors in the context of a regular expression mark the beginning and the end of the expression. In our regex, /^#?([a-f0-9]{6}|[a-f0-9]{3})$/, the beginning is marked by the '^' and the end is marked by the '$'. These anchors are what is called an exact match anchor, which finds a string that matches all of the requirements for each part of the expression. In our case, the string must begin with a '#' and have a combination of three or six total characters that are lowercase letters a-f or numbers 0-9. An exact match will not accept a string that exceeds the character limit set by the quantifiers {6} and {3} within our regex. 
 
 ### Quantifiers
+Quantifiers are the components of the regex that take a specified amount of characters from a search pattern. In our regex, two quantifiers can be seen inside the curly brackets, {6} and {3}. Our first quantifier, [a-f0-9]{6}, is telling the computer to find a string with six characters that contains lowercase letters a-f or numbers 0-9. Our second quantifier, [a-f0-9]{3}, is telling the computer to find a string with three characters that contains lowercase letters a-f or numbers 0-9. Our final quantifier is the '?' adjacent to the '#' which tells the computer to find a string that contains a single '#' or none at all. 
 
 ### OR Operator
 
