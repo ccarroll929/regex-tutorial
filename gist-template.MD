@@ -46,6 +46,9 @@ Character classes are components within our regular expression that tell us what
 The flags for `/^#([a-f0-9]{6}|[a-f0-9]{3})$/` are marked by the `^` and `$`. While they share similar function to anchors, the purpose of the flags `^` and `$` is to increase the amount of matches the computer will find. They accomplish this by telling the computer search for a match at any line that begins with #, avoiding any strings that do not start with # from being returned as a result. 
 
 ### Grouping and Capturing
+Grouping and Capturing is used in regular expressions to indicate which parts of the strings are to be grouped together and captured. We can identify grouping and capturing in our regular expression by looking at what is inside the parentheses: `([a-f0-9]{6}|[a-f0-9]{3})`. This captures any string that meets the grouping requirements of having three or six characters containing lowercase letters a-f and/or digits between 0 and 9.
+
+Example: `"abc123, efg456"` In this example, the regex is looking for one of two expressions that match the requirements of the search pattern inside the parenthesis. In this case, `abc123` would be accepted first because it's the first string that meets the criteria of having three or six characters containing lowercase letters a-f and/or digits between 0-9.
 
 ### Bracket Expressions
 
