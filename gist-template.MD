@@ -36,6 +36,7 @@ Anchors in the context of a regular expression mark the beginning and the end of
 Quantifiers are the components of the regex that take a specified amount of characters from a search pattern. In our regex, two quantifiers can be seen inside the curly brackets, {6} and {3}. Our first quantifier, [a-f0-9]{6}, is telling the computer to find a string with six characters that contains lowercase letters a-f or numbers 0-9. Our second quantifier, [a-f0-9]{3}, is telling the computer to find a string with three characters that contains lowercase letters a-f or numbers 0-9. Our final quantifier is the '?' adjacent to the '#' which tells the computer to find a string that contains a single '#' or none at all. 
 
 ### OR Operator
+The OR Operator in our regex expression is marked by the | between our two quantifiers in brackets. This OR Operator servers two purposes. The first is it allows our search to find a string with six characters OR a string with three characters that meet the parameters inside the brackets. The second purpose is capturing and storing strings that meet the parameter requirements for later use. 
 
 ### Character Classes
 
