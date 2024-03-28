@@ -1,11 +1,9 @@
 # Title (Regex Tutorial)
 
-Introductory paragraph (replace this with your text)
-
-## Summary
-
 ## What is a Regex? 
 A regex, short for "regular expression," is a sequence of characters that define a particular search pattern. Primarily used for pattern matching within strings, regex is an important tool that allows users to efficiently search, validate, parse, and replace certain patterns of characters within a string spanning over large bodies of text. 
+
+## Summary
 
 In this tutorial, we will be breaking down the components of a Regular Expression used to search for a specific hex value, i.e., hexadecimal numbers. A hexadecimal number is part of a color coding system that labels colors with a hashtag followed by a group of 3 or 6 characters that are unique to that color. (ex: #abc or #abc123).
 Below is the regex that I will be explaining in more detail.  
@@ -56,6 +54,7 @@ In our regular expression, we have two sets of brackets which both contain `[a-f
 Example: "abcdefgxyz321" In this string, the lowercase letters that would be chosen are `abcdef` because they are lowercase letters that are between a-f. The second component of the string that will be chosen is the numbers `321` because they are numbers between 0-9.
 
 ### Greedy and Lazy Match
+In this section I will discuss the difference between a Greedy and Lazy match. A Greedy match tries to match an element as many times as possible, yielding a large number of search results. Conversely, a Lazy match tries to match an element as few times as possible, yielding fewer search results. A Greedy quantifier can be represented by the following characters `*`, `+`, `?`, `{ n }`, `{ n ,}` `{ n, m }` and to turn a Greedy quantifier into a Lazy quantifier we simply add a question mark to it like this: `*?`, `+?`, `??`, `{ n }?`, `{ n ,}?` `{ n, m }?`. Using our regular expression,  `/^#([a-f0-9]{6}|[a-f0-9]{3})$/`, an example of a Greedy match would be `/^#*([a-f0-9]{6}|[a-f0-9]{3})$/` with a Greedy quantifier inserted after the hashtag and before the parentheses. And to turn it into a Lazy match we would add the question mark to our Greedy quantifier so our regex looks like this: `/^#*?([a-f0-9]{6}|[a-f0-9]{3})$/` 
 
 ### Boundaries
 
